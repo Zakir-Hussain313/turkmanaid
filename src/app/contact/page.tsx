@@ -8,7 +8,7 @@ const contactMethods = [
   {
     icon: <Phone className="w-6 h-6" />,
     title: 'Phone',
-    details: '+32 2 123 4567',
+    details: '+93 795455274',
     description: 'Mon-Fri from 9am to 6pm CET',
   },
   {
@@ -257,19 +257,6 @@ export default function ContactPage() {
                     <span>We support communications in English and Persian</span>
                   </li>
                 </ul>
-              </div>
-
-              {/* Emergency Contact */}
-              <div className="bg-red-50 border-2 border-red-200 p-6 rounded-2xl">
-                <h3 className="text-xl text-red-900 mb-2">Emergency Hotline</h3>
-                <p className="text-red-700 mb-3">For urgent humanitarian assistance requests</p>
-                <a
-                  href="tel:+3221234567"
-                  className="text-2xl text-red-900 hover:text-red-700 transition-colors"
-                >
-                  +32 2 123 4567
-                </a>
-                <p className="text-sm text-red-600 mt-2">Available 24/7</p>
               </div>
             </motion.div>
           </div>
