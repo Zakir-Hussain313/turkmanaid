@@ -28,30 +28,31 @@ const values = [
 
 const team = [
     {
-        name: 'Dr. Elena Popescu',
-        role: 'Executive Director',
-        image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Elena',
-        bio: '15+ years in international development',
+        name: "Ghafoor Salihi",
+        role: "President",
+        bio: "Community advocate with over 10 years of experience supporting local families and youth initiatives.",
     },
     {
-        name: 'Marcus Weber',
-        role: 'Director of Programs',
-        image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus',
-        bio: 'Led 200+ successful projects across Europe',
+        name: "Haji Mustafa",
+        role: "Volunteer",
+        bio: "Passionate about grassroots development and coordinating small-scale education and community projects.",
     },
     {
-        name: 'Sofia Dimitrova',
-        role: 'Head of Partnerships',
-        image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=SofiaD',
-        bio: 'Former UN Development Programme advisor',
+        name: "Muhammad Noor Rohani",
+        role: "Volunteer",
+        bio: "Focused on building relationships with local partners and volunteers to strengthen community impact.",
     },
     {
-        name: 'Jean-Pierre Dubois',
-        role: 'Chief Financial Officer',
-        image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jean',
-        bio: 'Expert in nonprofit financial management',
+        name: "Toryalai",
+        role: "Volunteer",
+        bio: "Oversees budgeting and financial transparency to ensure responsible use of donor funds.",
     },
-];
+    {
+        name: "Faizullah",
+        role: "Volunteer",
+        bio: "Works closely with volunteers and community members to organize events and support outreach programs.",
+    },
+]
 
 const milestones = [
     { year: '2013', event: 'Turkman Aid established in Paris' },
@@ -243,14 +244,6 @@ export default function AboutPage() {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                             >
-                                <div className='relative w-full h-64bg-gray-100 '>
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover "
-                                    />
-                                </div>
                                 <div className="p-6">
                                     <h3 className="text-xl text-gray-900 mb-1">{member.name}</h3>
                                     <p className="text-blue-700 mb-3">{member.role}</p>

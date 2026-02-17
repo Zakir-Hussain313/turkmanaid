@@ -1,13 +1,14 @@
 'use client'
 import { AnimatePresence, motion } from 'motion/react';
-import { Mail, Phone, Clock, Send, MessageSquare, HelpCircle } from 'lucide-react';
+import { Mail, Clock, Send, MessageSquare, HelpCircle } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
+import { FaWhatsapp } from "react-icons/fa6";
 
 const contactMethods = [
   {
-    icon: <Phone className="w-6 h-6" />,
-    title: 'Phone',
+    icon: <FaWhatsapp className="w-6 h-6" />,
+    title: 'Whatsapp',
     details: '+93 795455274',
     description: 'Mon-Fri from 9am to 6pm CET',
   },
@@ -19,7 +20,7 @@ const contactMethods = [
   },
   {
     icon: <Clock className="w-6 h-6" />,
-    title: 'Office Hours',
+    title: 'Working Hours',
     details: 'Monday - Friday',
     description: '9:00 AM - 6:00 PM CET',
   },
@@ -66,7 +67,6 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
           </motion.div>
 
           {/* Contact Methods */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-5 max-w-275 mx-4">
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
@@ -118,17 +118,18 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Map Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+      <section className="py-6 bg-white">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="w-full max-w-3xl shrink-0"
             >
-              <div className="bg-gray-50 p-8 rounded-2xl">
+              <div className="bg-gray-50 max-w-3xl mx-4 p-8 rounded-2xl">
                 <div className="flex items-center gap-3 mb-6">
                   <MessageSquare className="w-8 h-8 text-blue-700" />
                   <h2 className="text-3xl text-gray-900">Send us a Message</h2>
@@ -201,62 +202,16 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button
+                 <div className='flex justify-center items-center'>
+                   <button
                     type="submit"
-                    className="group w-full px-8 py-4 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-all duration-300 hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer"
+                    className="group w-52 px-8 py-4 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-all duration-300 hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer"
                   >
                     Send Message
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
+                 </div>
                 </form>
-              </div>
-            </motion.div>
-
-            {/* Map & Additional Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="space-y-8"
-            >
-              {/* Map */}
-              <div className="bg-gray-100 rounded-2xl overflow-hidden h-100 relative">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.1989479757144!2d4.3517!3d50.8503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDUxJzAxLjEiTiA0wrAyMScwNi4xIkU!5e0!3m2!1sen!2sbe!4v1234567890"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="H Office Location"
-                />
-              </div>
-
-              {/* Quick Info */}
-              <div className="bg-blue-50 p-6 rounded-2xl">
-                <h3 className="text-xl text-gray-900 mb-4">Quick Information</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span>We respond to all inquiries within 24 hours</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span>For urgent matters, please call us directly</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span>We support communications in English and Persian</span>
-                  </li>
-                </ul>
               </div>
             </motion.div>
           </div>
@@ -293,7 +248,7 @@ export default function ContactPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-2xl shadow-lg cursor-pointer"
+                  className="bg-white p-6 rounded-2xl mx-4 shadow-lg cursor-pointer"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
                   <h3 className="text-xl text-gray-900 mb-3">

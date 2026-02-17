@@ -1,5 +1,6 @@
-import { Heart, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart , Mail } from 'lucide-react';
 import Link from 'next/link';
+import { FaWhatsapp } from "react-icons/fa6";
 
 export function Footer() {
   return (
@@ -17,23 +18,7 @@ export function Footer() {
             <p className="text-sm mb-6">
               Creating lasting change in communities across dependent areas since 2013.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
-
-          {/* Quick Links */}
           <div>
             <h4 className="text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -58,13 +43,9 @@ export function Footer() {
           <div>
             <h4 className="text-white mb-4">Contact Us</h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <span className="text-sm">123 Charity Street, Brussels, Belgium 1000</span>
-              </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-blue-400 shrink-0" />
-                <span className="text-sm">+32 2 123 4567</span>
+                <FaWhatsapp className="w-5 h-5 text-blue-400 shrink-0" />
+                <span className="text-sm">+93 795455274</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-400 shrink-0" />

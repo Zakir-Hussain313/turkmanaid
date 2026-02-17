@@ -109,7 +109,7 @@ export default function FAQSection() {
                 >
                     <p className="text-gray-600 mb-4">Still have questions?</p>
                     <Link
-                        href="#contact-form"
+                        href="/contact"
                         className="inline-block px-8 py-3 text-blue-700 border-2 border-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300"
                     >
                         Contact Us Directly
